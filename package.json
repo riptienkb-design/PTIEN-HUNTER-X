@@ -1,0 +1,33 @@
+{
+  "name": "ptien-hunter-x",
+  "version": "0.1.0",
+  "description": "Security Research Platform for Bug Bounty & Vulnerability Research",
+  "private": true,
+  "packageManager": "pnpm@8.0.0",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "build": "pnpm -r build",
+    "lint": "eslint . --ext .ts,.tsx --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "db:migrate": "cd packages/database && pnpm run migrate",
+    "db:seed": "cd packages/database && pnpm run seed",
+    "db:reset": "cd packages/database && pnpm run reset",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6",
+    "@vitest/ui": "^0.34.6"
+  }
+}
